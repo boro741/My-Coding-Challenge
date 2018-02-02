@@ -9,7 +9,9 @@ int main(){
 // Finding the no of 1's and 0's
     while (t >0) {
         
-        n_zero = n_zero + (t%10>0 ? 0 : 1);
+        // t%10 > 0 ---> 
+        // When the remainder is 0 then the value is 1.
+        n_zero = n_zero + (t%10 > 0  ? 0 : 1);
         
         // used to traverse all through the digit.
         t = t/10;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>W3</title>
+</head>
+<body>
+  <select id="countries" onchange="capital()">
+      <option value="delhi">India</option>
+      <option  value="canbera">Australia</option>
+  </select>
+  
+  <div>
+      <ul id="list">
+
+      </ul>
+  </div>
+  <script>
+     function capital(){
+         var country = document.getElementById('countries').text;
+         var capital = document.getElementById('countries').value;
+
+         document.getElementById('list').innerHTML = " ";
+         var ul = document.getElementById('list');
+         var li = document.createElement('li');
+         var LI = ul.appendChild(li);
+
+         LI.innerHTML = "<p style='color:red'> " + capital +"</p>";
+     }
+  </script>
+</body>
+</html>
